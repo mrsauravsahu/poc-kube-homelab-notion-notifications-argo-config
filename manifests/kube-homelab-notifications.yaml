@@ -35,7 +35,7 @@ spec:
                               "title": [
                                 {
                                   "text": {
-                                    "content": "Argo Notification @Sahu, S - '"$(date)"'"
+                                    "content": "Argo Notification @Saurav Sahu - '"$(date)"'"
                                   }
                                 }
                               ]
