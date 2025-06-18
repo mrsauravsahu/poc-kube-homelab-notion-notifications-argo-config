@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: kube-homelab-notifications-job
-  namespace: payobills
+  namespace: homelab
 spec:
   schedule: "*/1 * * * *"  # every 1 minute (K8s minimum granularity)
   jobTemplate:
