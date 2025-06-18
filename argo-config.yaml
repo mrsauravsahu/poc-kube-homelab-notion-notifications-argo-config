@@ -12,7 +12,7 @@ spec:
   - namespace: homelab
     server: https://kubernetes.default.svc
   sourceRepos:
-  - https://github.com/mrsauravsahu/poc-kube-homelab-notifion-notificaitons-argo-config
+  - https://github.com/mrsauravsahu/poc-kube-homelab-notion-notifications-argo-config
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -24,7 +24,7 @@ spec:
     server: https://kubernetes.default.svc
   project: homelab
   sources:
-    - repoURL: https://github.com/mrsauravsahu/poc-kube-homelab-notifion-notificaitons-argo-config
+    - repoURL: https://github.com/mrsauravsahu/poc-kube-homelab-notion-notifications-argo-config
       path: manifests
       targetRevision: main
   syncPolicy:
