@@ -1,0 +1,32 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: homelab
+spec:
+  clusterResourceWhitelist:
+  - group: ''
+    kind: Namespace
+  sourceNamespaces:
+  - homelab
+  destinations:
+  - namespace: homelab
+    server: https://kubernetes.default.svc
+  sourceRepos:
+  - https://github.com/mrsauravsahu/poc-kube-homelab-notifion-notificaitons-argo-config
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: 
+spec:
+  destination:
+    namespace: homelab
+    server: https://kubernetes.default.svc
+  project: homelab
+  sources:
+    - repoURL: https://github.com/mrsauravsahu/poc-kube-homelab-notifion-notificaitons-argo-config
+      path: manifests
+      targetRevision: main
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
