@@ -14,12 +14,12 @@ spec:
               image: curlimages/curl:latest
               env:
                 - name: NOTION_DB_ID
-                  value: "2168d9b5959f80bcb605d94e4d9294f1"  # Can be templated via Helm or Kustomize
+                  value: "2168d9b5959f80bcb605d94e4d9294f1"
                 - name: NOTION_SECRET_TOKEN
                   valueFrom:
                     secretKeyRef:
-                      name: notion-secret
-                      key: NOTION_SECRET_TOKEN
+                      name: notion-token-tmp
+                      key: token
               command: ["/bin/sh", "-c"]
               args:
                 - |
