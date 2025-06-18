@@ -12,7 +12,7 @@ spec:
           containers:
             - name: notion-writer
               image: curlimages/curl:latest
-              pullPolicy: IfNotPresent
+              imagePullPolicy: IfNotPresent
               env:
                 - name: NOTION_DB_ID
                   value: "2168d9b5959f80bcb605d94e4d9294f1"
