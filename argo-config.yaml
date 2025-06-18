@@ -17,7 +17,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: 
+  name: homelab-notion-tmp-notification-cronjob-app
 spec:
   destination:
     namespace: homelab
